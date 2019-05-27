@@ -1,14 +1,20 @@
 fn main() {
-    let mut s = String::from("hello world");
+    let my_string = String::from("hello world");
 
-    let word = first_word(&s);
+    // first_word works on slices of String 
+    let word = first_word(&my_string[..]);
+    
+    let my_string_literal = "hello world";
 
-    s.clear();
+    // first_word works on slices of string literals
+    let word = first_word(&my_string_literal);
 
-    println!("The value of word is {}", word);
+    // Because string literals are string slices already,
+    // this works too, without the slice syntax.
+    let word = first_word(my_string_literal);
 }
 
-fn first_word(some_string: &String) -> &str {
+fn first_word(some_string: &str) -> &str {
     let bytes = some_string.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
