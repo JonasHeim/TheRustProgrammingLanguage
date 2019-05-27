@@ -1,9 +1,13 @@
 fn main() {
-    let number = 3;
+    let number = 6;
 
-    if number < 5 {
-        println!("condition was true");
+    if number % 4 == 0 {
+        println!("number is divisable by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisable by 3");
+    } else if number % 2 == 0 {
+        println!("number is divisable by 2");
     } else {
-        println!("condition was false");
+        println!("number is not divisable by either 4, 3 or 2");
     }
 }
