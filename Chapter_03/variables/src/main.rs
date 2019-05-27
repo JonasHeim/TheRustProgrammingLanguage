@@ -1,21 +1,7 @@
 fn main() {
-    // addition
-    let sum = 5 + 10;
-    println!("Sum {}", sum);
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
 
-    // subtraction
-    let difference = 95.5 - 4.3;
-    println!("Difference {}", difference);
+    let (x, y, z) = tup;
 
-    // multiplication
-    let product = 4 * 30;
-    println!("Product {}", product);
-
-    // division
-    let quotient = 56.7 / 32.2;
-    println!("Quotient {}", quotient);
-
-    // remainder
-    let remainder = 43 % 5;
-    println!("Remainder {}", remainder);
+    println!("The value of y is: {}", y);
 }
