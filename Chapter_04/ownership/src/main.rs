@@ -1,17 +1,22 @@
 fn main() {
-    let s = String::from("hello");
+    let s1 = gives_ownership();
 
-    takes_ownership(s);
+    println!("The value of s1 is: {}", s1);
 
-    let x = 5;
+    let s2 = String::from("hello");
 
-    makes_copy(x);
+    println!("The value of s2 is: {}", s2);
+
+    let s3 = takes_and_gives_ownership_back(s2);
+
+    println!("The value of s3 is: {}", s3);
 }
 
-fn takes_ownership(some_string: String) {
-    println!("{}", some_string);
+fn gives_ownership() -> String {
+    let some_string = String::from("world");
+    some_string
 }
 
-fn makes_copy(some_integer: i32) {
-    println!("{}", some_integer);
+fn takes_and_gives_ownership_back(a_string: String) -> String {
+    a_string
 }
