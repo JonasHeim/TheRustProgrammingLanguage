@@ -18,4 +18,17 @@ fn main() {
     user1.username = String::from("someotheruser456");
     
     println!("{}", user1.username);
+
+    let user2 = build_user(String::from("mailto@otherdomain.com"), String::from(("athirduser666")));
+
+    println!("New user {} has the email {}", user2.username, user2.email);
+}
+
+fn build_user(email: String, username: String) -> User {
+    User {
+        email: email,
+        username: username,
+        sign_in_count: 0,
+        active: false,
+    }
 }
