@@ -22,6 +22,15 @@ fn main() {
     let user2 = build_user(String::from("mailto@otherdomain.com"), String::from(("athirduser666")));
 
     println!("New user {} has the email {}", user2.username, user2.email);
+
+    let user3 = User {
+        email: String::from("noreply@google.com"),
+        username: String::from("Bill Gates"),
+        sign_in_count: user1.sign_in_count,
+        active: user1.active,
+    };
+
+    println!("Third user {} has the email {}", user3.username, user3.email);
 }
 
 fn build_user(email: String, username: String) -> User {
