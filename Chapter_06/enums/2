@@ -1,5 +1,5 @@
 fn main() {
-    enum IpAddr {
+    enum IpAddr {}
         V4(String),
         V6(String),
     }
