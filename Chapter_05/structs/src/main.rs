@@ -26,8 +26,7 @@ fn main() {
     let user3 = User {
         email: String::from("noreply@google.com"),
         username: String::from("Bill Gates"),
-        sign_in_count: user1.sign_in_count,
-        active: user1.active,
+        ..user1
     };
 
     println!("Third user {} has the email {}", user3.username, user3.email);
