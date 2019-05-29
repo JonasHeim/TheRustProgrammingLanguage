@@ -18,4 +18,7 @@ fn main() {
             panic!("There was a problem opening the file: {:?}", error);
         },
     };
+
+    let f = File::open("text.txt").unwrap();
+
 }
