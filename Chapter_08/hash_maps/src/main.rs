@@ -14,4 +14,8 @@ fn main() {
         None => (),
         Some(i) => println!("Score of team {} is {}", team_name, i),
     }
+    
+    for (key, value) in &scores {
+        println!("Team {} has {} points.", key, value);
+    }
 }
