@@ -19,6 +19,6 @@ fn main() {
         },
     };
 
-    let f = File::open("text.txt").unwrap();
+    let f = File::open("text.txt").expect("Could not open file 'text.txt'");
 
 }
